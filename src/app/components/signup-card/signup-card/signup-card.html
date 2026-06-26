@@ -1,0 +1,28 @@
+<div class="signup-card">
+  <form class="signup-card__form" (ngSubmit)="onNotifyMe()" novalidate>
+    <input
+      class="signup-card__input"
+      type="text"
+      value="name"
+      name="name"
+      placeholder="Enter your Name..."
+      [(ngModel)]="name"
+      required
+    />
+    <input
+      class="signup-card__input"
+      type="phone"
+      value="phone"
+      name="phone"
+      regex="[0-9]{10}"
+      placeholder="Enter your Mobile Number..."
+      [(ngModel)]="email"
+      required
+    />
+    <button class="signup-card__button" type="submit">Get a call</button>
+  </form>
+
+  <p *ngIf="submitted()" class="signup-card__confirmation" role="status">
+    Thanks! We'll Connect you soon.
+  </p>
+</div>

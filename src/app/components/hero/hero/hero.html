@@ -1,0 +1,131 @@
+<section class="landing">
+  <!-- Decorative artwork as a full-bleed background layer -->
+  <div class="landing__art" aria-hidden="true">
+    <div class="art__diagonal"></div>
+
+    <div class="art__block art__block--top-left"></div>
+    <div class="art__block art__block--hero"></div>
+    <div class="art__block art__block--mid-left"></div>
+    <div class="art__block art__block--small-left"></div>
+    <div class="art__block art__block--top-right"></div>
+    <div class="art__block art__block--right-mid"></div>
+
+    <svg class="art__wave art__wave--top" viewBox="0 0 260 120" fill="none">
+      <path
+        d="M10 100C40 40 80 10 120 30C160 50 150 90 190 80C220 72 230 40 250 20"
+        stroke="rgba(255,255,255,0.35)"
+        stroke-width="2"
+      />
+    </svg>
+
+    <svg class="art__wave art__wave--bottom" viewBox="0 0 420 140" fill="none">
+      <path
+        d="M0 60C60 10 110 110 170 70C220 36 250 100 310 70C350 50 370 90 420 60"
+        stroke="rgba(255,255,255,0.45)"
+        stroke-width="2.5"
+      />
+    </svg>
+
+    <span class="dot-accent dot-accent--1"></span>
+    <span class="dot-accent dot-accent--2"></span>
+    <span class="dot-accent dot-accent--3"></span>
+    <span class="dot-accent dot-accent--4"></span>
+    <span class="dot-accent dot-accent--5"></span>
+    <span class="dot-accent dot-accent--6"></span>
+  </div>
+
+  <!-- Foreground content, sits above the art background -->
+  <div class="landing__foreground">
+    <!-- Logo stays top-left -->
+    <div class="logo" aria-hidden="true">
+      <span class="logo__square logo__square--top"></span>
+      <span class="logo__square logo__square--bottom"></span>
+    </div>
+
+    <!-- FULL-WIDTH centered headline + subtext -->
+    <div class="landing__intro">
+      <h1 class="headline">
+        Helping businesses raise capital, build stronger brands &amp; create
+        digital presence
+      </h1>
+
+      <p class="subtext">
+        We partner with businesses to deliver investor-ready pitch decks,
+        fundraising support, business valuation solutions, tax advisory, and
+        premium website development.
+      </p>
+    </div>
+
+    <div class="landing__content">
+      <app-signup-card></app-signup-card>
+
+      <ul class="features">
+        @for (item of discoverItems; track $index) {
+          <li class="feature">
+            <span class="feature__icon" [class]="'feature__icon--' + item.icon" aria-hidden="true">
+              @if (item.icon === 'dots') {
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              } @else {
+                <span class="corner corner--tl"></span>
+                <span class="corner corner--tr"></span>
+                <span class="corner corner--bl"></span>
+                <span class="corner corner--br"></span>
+              }
+            </span>
+            <div class="feature__copy">
+              <h3 class="feature__title">{{ item.title }}</h3>
+              <p class="feature__description">{{ item.description }}</p>
+            </div>
+          </li>
+        }
+      </ul>
+
+      <div class="explore-more">
+        <a class="explore-more__button" [routerLink]="'/what-we-do'">Explore more</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="journey-panel" aria-labelledby="journey-heading">
+  <div class="journey-panel__inner">
+    <h2 id="journey-heading" class="journey-panel__title">Our Journey</h2>
+
+    <div class="journey-panel__body">
+      <figure class="journey-panel__founder">
+        <div class="journey-panel__photo">
+          <!-- founder photo goes here later -->
+          <img src="/assets/images/founder.jpg" alt="Founder Name" />
+            <!-- <circle cx="12" cy="8.5" r="3.6" stroke="currentColor" stroke-width="1.3" />
+            <path
+              d="M4.5 19.2c0-3.6 3.4-6.2 7.5-6.2s7.5 2.6 7.5 6.2"
+              stroke="currentColor"
+              stroke-width="1.3"
+              stroke-linecap="round"
+            /> -->
+          
+        </div>
+        <figcaption class="journey-panel__caption">
+          <span class="journey-panel__name">Sonali Arora</span>
+          <span class="journey-panel__role">Founder</span>
+        </figcaption>
+      </figure>
+
+      <div class="journey-panel__copy">
+        <p>It started with a problem we kept seeing everywhere.</p>
+        <p>Businesses with genuine potential — struggling to raise capital. Not because investors were not interested, but because the right guidance simply was not there when it mattered most.</p>
+        <p>Over 3 years of working closely with founders and investors, we have seen what makes investors say yes, and more importantly, what makes them walk away.</p>
+        <p>We built this firm to bridge that gap — helping businesses speak the investor's language and secure the capital they need.</p>
+        <p><em>Because the right advice can change everything.</em></p>
+      </div>
+    </div>
+  </div>
+</section>

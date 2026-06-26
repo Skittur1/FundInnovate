@@ -1,0 +1,157 @@
+:host {
+  --panel-bg: #0f0f13;
+  --card-bg: #0b0b0e;
+  --muted: #9a9aa3;
+  --accent: #6a6aff;
+  display: block;
+ font-family: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+}
+
+.whatwedo {
+  background: linear-gradient(180deg, #08080a 0%, #0d0d10 100%);
+  color: #f5f5f7;
+  padding: 64px 20px;
+}
+
+.whatwedo__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.whatwedo__header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.whatwedo__title {
+  margin: 0 0 8px;
+  font-size: 28px;
+  letter-spacing: -0.02em;
+}
+
+.whatwedo__lead {
+  margin: 0;
+  color: var(--muted);
+}
+
+.whatwedo__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px 16px; /* reduced gap so cards sit closer */
+}
+
+.service {
+  display: flex;
+  gap: 12px; /* smaller gap between image and content */
+  background: var(--card-bg);
+  border: 1px solid rgba(255,255,255,0.03);
+  padding: 12px; /* slightly reduced padding */
+  border-radius: 10px;
+  align-items: center;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+  box-shadow: 0 6px 18px rgba(2,2,10,0.35);
+  border-left: 4px solid transparent;
+}
+
+.service:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 20px 40px rgba(2,2,10,0.6);
+  border-left-color: var(--accent);
+  background: linear-gradient(90deg, rgba(106,106,255,0.04), rgba(255,255,255,0.01));
+}
+
+.service__img {
+  width: 140px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+/* Ensure image elements fill the container and use cover to avoid cropping issues */
+.service__img img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.service__media {
+  flex: 0 0 auto;
+}
+
+.service__img {
+  flex: 0 0 140px;
+}
+
+/* Per-card accents (change image placeholder color and hover border) */
+.service:nth-child(1) { --accent-color: #6a6aff; }
+.service:nth-child(2) { --accent-color: #3fd9c7; }
+.service:nth-child(3) { --accent-color: #ffb86b; }
+.service:nth-child(4) { --accent-color: #7bd389; }
+.service:nth-child(5) { --accent-color: #ff7aa2; }
+.service:nth-child(6) { --accent-color: #7aa3ff; }
+.service:nth-child(7) { --accent-color: #c88cff; }
+
+.service:nth-child(n) { --accent-color: var(--accent); }
+
+.service:nth-child(n) .service__img { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); }
+
+/* Target inline SVG rect inside the placeholder and tint per card */
+.service:nth-child(1) svg rect { fill: #e9e9ff; }
+.service:nth-child(2) svg rect { fill: #e6fffa; }
+.service:nth-child(3) svg rect { fill: #fff2e6; }
+.service:nth-child(4) svg rect { fill: #e9fff0; }
+.service:nth-child(5) svg rect { fill: #ffe9f3; }
+.service:nth-child(6) svg rect { fill: #e8f0ff; }
+.service:nth-child(7) svg rect { fill: #f3e9ff; }
+
+/* Make the accent bar use the per-card color on hover */
+.service:nth-child(1):hover { border-left-color: #6a6aff; }
+.service:nth-child(2):hover { border-left-color: #3fd9c7; }
+.service:nth-child(3):hover { border-left-color: #ffb86b; }
+.service:nth-child(4):hover { border-left-color: #7bd389; }
+.service:nth-child(5):hover { border-left-color: #ff7aa2; }
+.service:nth-child(6):hover { border-left-color: #7aa3ff; }
+.service:nth-child(7):hover { border-left-color: #c88cff; }
+
+.service__body {
+  flex: 1;
+}
+
+.service__title {
+  margin: 0 0 6px;
+  font-size: 18px;
+}
+
+.service__desc {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.service__points {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.service__points li {
+  margin: 4px 0;
+}
+
+@media (max-width: 880px) {
+  .whatwedo__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service {
+    align-items: flex-start;
+  }
+}

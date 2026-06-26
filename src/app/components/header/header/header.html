@@ -1,0 +1,42 @@
+
+<header class="header">
+	<div class="header__inner">
+		<div class="header__logo" aria-hidden="false">
+			<img class="header__logo-img" src="/assets/logos/LogoNew.png" alt="FundInnovate logo" />
+			<!-- <span class="header__brand">FundInnovate</span> -->
+		</div>
+
+		<nav class="header__nav" [class.is-open]="menuOpen()" aria-label="Primary Navigation">
+			<ul class="header__links">
+				@for (link of navLinks; track link.path) {
+					<li>
+						<a
+							class="header__link"
+							[routerLink]="link.path"
+							routerLinkActive="is-active"
+							[routerLinkActiveOptions]="{ exact: true }"
+							(click)="closeMenu()"
+						>
+							{{ link.label }}
+						</a>
+					</li>
+				}
+			</ul>
+		</nav>
+
+		<div class="header__actions">
+			<button
+				class="header__toggle"
+				type="button"
+				(click)="toggleMenu()"
+				[class.is-open]="menuOpen()"
+				aria-expanded="{{ menuOpen() }}"
+				aria-label="Toggle navigation"
+			>
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+		</div>
+	</div>
+</header>

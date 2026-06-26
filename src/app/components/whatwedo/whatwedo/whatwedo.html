@@ -1,0 +1,28 @@
+<section class="whatwedo">
+  <div class="whatwedo__inner">
+    <header class="whatwedo__header">
+      <h2 class="whatwedo__title">What We Do</h2>
+      <p class="whatwedo__lead">Comprehensive services for startups — from fundraising to product and growth.</p>
+    </header>
+
+    <div class="whatwedo__grid">
+      <div class="service" *ngFor="let s of services; let i = index">
+        <div class="service__media" aria-hidden="true">
+          <div class="service__img">
+            <!-- Dummy image: simple SVG placeholder -->
+            <img *ngFor="let photo of s.photos" [src]="photo" alt="{{ s.title }}" />
+          </div>
+        </div>
+
+        <div class="service__body">
+          <h3 class="service__title">{{ s.title }}</h3>
+          <p class="service__desc">{{ s.description }}</p>
+
+          <ul class="service__points" *ngIf="s.points && s.points.length">
+            <li *ngFor="let p of s.points">{{ p }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,42 @@
+<section class="about-us">
+  <div class="about-us__inner">
+    <header class="about-us__header">
+      <span class="about-us__eyebrow">About Company</span>
+      <h2 class="about-us__heading">Clarity, value, and confidence at every stage</h2>
+      <div class="about-us__subtext">
+        We partner with founders and businesses to build investor-ready
+        strategies and scalable digital presence. From valuation and
+        fundraising support to website development and mentorship, we
+        provide end-to-end solutions designed to support growth and
+        decision-making.
+      </div>
+      <p class="about-us__subtext">
+        Our focus is simple — deliver clarity, create value, and help
+        businesses move forward with confidence.
+      </p>
+    </header>
+
+    <header class="about-us__header about-us__header--team">
+      <span class="about-us__eyebrow">Our Team</span>
+      <h2 class="about-us__heading">The people behind FundInnovate</h2>
+      <p class="about-us__subtext">
+		
+      </p>
+    </header>
+
+    <div class="team-grid">
+      @for (member of team; track member.id) {
+        <article class="team-card">
+          <div class="team-card__photo">
+            <!-- founder / co-founder photo goes here later -->
+            <img src="{{ member.photo }}" alt="{{ member.name }}" />
+          </div>
+
+          <h3 class="team-card__name">{{ member.name }}</h3>
+          <span class="team-card__role">{{ member.role }}</span>
+          <p class="team-card__bio">{{ member.bio }}</p>
+        </article>
+      }
+    </div>
+  </div>
+</section>
