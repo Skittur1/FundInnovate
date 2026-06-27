@@ -14,7 +14,7 @@ export class WhatWeDo {
      {
       title: 'Fund Raising',
       description:
-        'Equity Funding, Debt Funding, Government Grants, Incubation Support, Acceleration Support',
+        'Equity Funding, Debt Funding, Government Grants, Incubation Support, Acceleration Support.',
       points: [],
       photos: ['assets/images/Fund-Rising.jpg'],
     },
@@ -60,7 +60,7 @@ export class WhatWeDo {
       description:
         'Delivering personalised one-on-one advisory to founders and businesses at every stage of their journey.',
       points: [],
-      photos: ['assets/images/mentor.png'],
+      photos: ['assets/images/mentor.jpg'],
     },
   ];
 }
