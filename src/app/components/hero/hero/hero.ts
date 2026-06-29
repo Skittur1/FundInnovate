@@ -18,7 +18,7 @@ export class Hero {
       icon: 'corners',
       title: 'Fund Raising',
       description:
-        'Equity Funding, Debt Funding, Government Grants, Incubation Support, Acceleration Support',
+        'Equity Funding, Debt Funding, Government Grants, Incubation Support, Acceleration Support.',
     },
     {
       icon: 'corners',

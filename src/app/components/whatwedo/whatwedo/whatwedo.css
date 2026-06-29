@@ -150,8 +150,10 @@
   .whatwedo__grid {
     grid-template-columns: 1fr;
   }
+ 
 
   .service {
     align-items: flex-start;
+    align-items: center;
   }
 }
